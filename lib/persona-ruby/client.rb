@@ -8,6 +8,9 @@ module Persona
             @access_token = 'Bearer ' + access_token
             @url = BASE_URL
         end
-        
+
+        def connection
+            Connection.new(@url, @access_token)
+        end
     end
 end 
