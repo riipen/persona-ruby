@@ -15,4 +15,9 @@ RSpec.describe Persona::Client do
     end
   end
 
+  describe '#connection' do
+    it 'returns a connection instance' do
+      expect(@client.connection).to be_a(Persona::Connection)
+    end
+  end
 end
