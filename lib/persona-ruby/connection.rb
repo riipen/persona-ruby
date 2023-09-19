@@ -26,6 +26,10 @@ module Persona
     def request(method, id, params = {})
       response = @connection.send(method, id, params)
 
+      error = Error.from_response(response)
+
+      raise error if error
+
       response.body
     end
   end
