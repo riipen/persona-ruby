@@ -5,7 +5,7 @@ module Persona
         include Persona::Actions::Inquiries
         attr_reader :url
         
-        BASE_URL = "https://withpersona.com/api/v1/inquiries"
+        BASE_URL = "https://withpersona.com/api/v1"
 
         def initialize(access_token:)
             @access_token = 'Bearer ' + access_token

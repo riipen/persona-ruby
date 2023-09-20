@@ -11,20 +11,20 @@ module Persona
       end
     end
 
-    def delete(id, params = {})
-      request(:delete, id, params)
+    def delete(path, params = {})
+      request(:delete, path, params)
     end
 
-    def get(id, params = {})
-      request(:get, id, params)
+    def get(path, params = {})
+      request(:get, path, params)
     end
 
-    def post(id, params = {})
-      request(:post, id, params)
+    def post(path, params = {})
+      request(:post, path, params)
     end
 
-    def request(method, id, params = {})
-      response = @connection.send(method, id, params)
+    def request(method, path, params = {})
+      response = @connection.send(method, path, params)
 
       error = Error.from_response(response)
 

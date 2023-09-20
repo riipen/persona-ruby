@@ -4,7 +4,7 @@ module Persona
   module Actions
     module Inquiries
       def inquiry_list()
-        connection.get('', params = {})
+        connection.get("/inquiries", params = {})
       end
     end
   end
