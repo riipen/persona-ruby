@@ -2,6 +2,7 @@
 
 $LOAD_PATH.unshift File.dirname(__FILE__)
 
+require "persona-ruby/actions/inquiries"
 require "persona-ruby/client"
 require "persona-ruby/connection"
 require "persona-ruby/error"
