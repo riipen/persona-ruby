@@ -11,10 +11,10 @@ module Persona
         when 401 then Unauthorized
         when 403 then Forbidden
         when 404 then NotFound
-        when 429 then TooManyRequests  
+        when 429 then TooManyRequests
         when 400..499 then ClientError
         when 500 then InternalServerError
-        when 502 then BadGateway  
+        when 502 then BadGateway
         when 503 then ServiceUnavailable
         when 500..599 then ServerError
         end
