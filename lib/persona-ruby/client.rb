@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
 module Persona
-    class Client
-        include Persona::Actions::Inquiries
-        attr_reader :url
-        
-        BASE_URL = "https://withpersona.com/api/v1"
+  class Client
+    include Persona::Actions::Inquiries
+    attr_reader :url
 
-        def initialize(access_token:)
-            @access_token = 'Bearer ' + access_token
-            @url = BASE_URL
-        end
+    BASE_URL = "https://withpersona.com/api/v1"
 
-        def connection
-            Connection.new(@url, @access_token)
-        end
+    def initialize(access_token:)
+      @access_token = "Bearer #{access_token}"
+      @url = BASE_URL
     end
-end 
+
+    def connection
+      Connection.new(@url, @access_token)
+    end
+  end
+end

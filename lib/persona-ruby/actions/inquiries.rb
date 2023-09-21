@@ -3,8 +3,8 @@
 module Persona
   module Actions
     module Inquiries
-      def inquiry_list()
-        connection.get("inquiries", params = {})
+      def inquiry_list
+        connection.get("inquiries", {})
       end
     end
   end
