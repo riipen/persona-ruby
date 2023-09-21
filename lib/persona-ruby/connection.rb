@@ -1,13 +1,15 @@
-require 'faraday'
+# frozen_string_literal: true
+
+require "faraday"
 
 module Persona
   class Connection
     def initialize(url, auth_token)
       @connection = Faraday.new(url: url) do |builder|
         builder.request :json
-        builder.headers[:accept] = 'application/json'
+        builder.headers[:accept] = "application/json"
         builder.response :json
-        builder.request :authorization, auth_token, ''
+        builder.request :authorization, auth_token, ""
       end
     end
 
