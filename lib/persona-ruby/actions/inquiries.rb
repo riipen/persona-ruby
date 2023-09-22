@@ -6,6 +6,10 @@ module Persona
       def inquiry_list
         connection.get("inquiries", {})
       end
+
+      def inquiry_get(id)
+        connection.get("inquiries/#{id}", {})
+      end
     end
   end
 end
