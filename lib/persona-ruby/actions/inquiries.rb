@@ -18,6 +18,10 @@ module Persona
       def inquiry_update(id, attributes = {})
         connection.patch("inquiries/#{id}", {data: {attributes:}})
       end
+
+      def inquiry_delete(id)
+        connection.delete("inquiries/#{id}", {})
+      end
     end
   end
 end
