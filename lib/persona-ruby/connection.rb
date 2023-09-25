@@ -21,6 +21,10 @@ module Persona
       request(:get, path, params)
     end
 
+    def patch(path, params = {})
+      request(:patch, path, params)
+    end
+
     def post(path, params = {})
       request(:post, path, params)
     end

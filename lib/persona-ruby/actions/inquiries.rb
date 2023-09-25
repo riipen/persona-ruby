@@ -14,6 +14,10 @@ module Persona
       def inquiry_create(attributes = {})
         connection.post("inquiries", {data: { attributes:}})
       end
+
+      def inquiry_update(id, attributes = {})
+        connection.patch("inquiries/#{id}", {data: {attributes:}})
+      end
     end
   end
 end
