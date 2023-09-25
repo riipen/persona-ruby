@@ -41,4 +41,17 @@ RSpec.describe Persona::Actions::Inquiries do
       expect(stub).to have_been_requested
     end
   end
+
+  describe "#inquiry_update" do
+    it "issues the correct PATCH request to update an inquiry" do
+      id = "0"
+      attributes = {"name-first": "Yugi", "name-last": "Moto"}
+      stub = stub_request(:get, 
+                          "#{@client.url}/inquiries/#{id}").with(body: { data: {attributes: }})
+
+      @client.inquiry_get(id, attributes)
+
+      expect(stub).to have_been_requested
+    end
+  end
 end
