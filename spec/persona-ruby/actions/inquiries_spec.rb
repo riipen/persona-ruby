@@ -46,10 +46,21 @@ RSpec.describe Persona::Actions::Inquiries do
     it "issues the correct PATCH request to update an inquiry" do
       id = "0"
       attributes = {"name-first": "Yugi", "name-last": "Moto"}
-      stub = stub_request(:get, 
+      stub = stub_request(:patch, 
                           "#{@client.url}/inquiries/#{id}").with(body: { data: {attributes: }})
 
-      @client.inquiry_get(id, attributes)
+      @client.inquiry_update(id, attributes)
+
+      expect(stub).to have_been_requested
+    end
+  end
+
+  describe "#inquiry_delete" do
+    it "issues the correct DELETE request to delete an inquiry" do
+      id = "0"
+      stub = stub_request(:delete, "#{@client.url}/inquiries/#{id}")
+
+      @client.inquiry_delete(id)
 
       expect(stub).to have_been_requested
     end
