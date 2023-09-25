@@ -10,6 +10,10 @@ module Persona
       def inquiry_get(id)
         connection.get("inquiries/#{id}", {})
       end
+
+      def inquiry_create(attributes = {})
+        connection.post("inquiries", {data: { attributes:}})
+      end
     end
   end
 end

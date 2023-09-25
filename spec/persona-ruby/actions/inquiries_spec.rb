@@ -29,4 +29,16 @@ RSpec.describe Persona::Actions::Inquiries do
       expect(stub).to have_been_requested
     end
   end
+
+  describe "#inquiry_post" do
+    it "issues the correct POST request to create an inquiry" do
+      attributes = {"account-id": "act_123", "inquiry-template-id": "itmpl_123"}
+      stub = stub_request(:post,
+                          "#{@client.url}/inquiries").with(body: { data: {attributes: } })
+
+      @client.inquiry_create(attributes)
+
+      expect(stub).to have_been_requested
+    end
+  end
 end
