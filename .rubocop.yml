@@ -24,7 +24,7 @@ RSpec/FilePath:
 
 RSpec/InstanceVariable:
   Enabled: false
-  
+
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
 
