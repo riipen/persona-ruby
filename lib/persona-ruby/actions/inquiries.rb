@@ -3,8 +3,8 @@
 module Persona
   module Actions
     module Inquiries
-      def inquiry_list
-        connection.get("inquiries", {})
+      def inquiry_list(params = {})
+        connection.get("inquiries", params)
       end
 
       def inquiry_get(id)
@@ -21,6 +21,10 @@ module Persona
 
       def inquiry_delete(id)
         connection.delete("inquiries/#{id}", {})
+      end
+
+      def inquiry_generate_one_time_link(id)
+        connection.post("inquiries/#{id}/generate-one-time-link")
       end
     end
   end

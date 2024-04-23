@@ -65,4 +65,16 @@ RSpec.describe Persona::Actions::Inquiries do
       expect(stub).to have_been_requested
     end
   end
+
+  describe "#inquiry_generate_one_time_link" do
+    it "issues the correct POST request to generate one time like for an inquiry" do
+      attributes = {"account-id": "act_123", "inquiry-template-id": "itmpl_123"}
+      stub = stub_request(:post,
+                          "#{@client.url}/inquiries/inq_123/generate-one-time-link")
+
+      @client.inquiry_generate_one_time_link("inq_123")
+
+      expect(stub).to have_been_requested
+    end
+  end
 end
