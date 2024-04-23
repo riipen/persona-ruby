@@ -72,7 +72,7 @@ RSpec.describe Persona::Actions::Inquiries do
       stub = stub_request(:post,
                           "#{@client.url}/inquiries/inq_123/generate-one-time-link")
 
-      @client.inquiry_generate_one_time_link("inq_123", expiry_time)
+      @client.inquiry_one_time_link("inq_123", expiry_time)
 
       expect(stub).to have_been_requested
     end
