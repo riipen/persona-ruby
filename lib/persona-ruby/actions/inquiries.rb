@@ -23,8 +23,8 @@ module Persona
         connection.delete("inquiries/#{id}", {})
       end
 
-      def inquiry_generate_one_time_link(id)
-        connection.post("inquiries/#{id}/generate-one-time-link")
+      def inquiry_generate_one_time_link(id, expiration_time = 3600)
+        connection.post("inquiries/#{id}/generate-one-time-link", {meta: { "expires-in-seconds": expiration_time }})
       end
     end
   end
