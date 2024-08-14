@@ -9,6 +9,6 @@ group :development, :test do
   gem "rspec", "~> 3.12.0"
   gem "rspec_junit_formatter", "~> 0.6.0"
   gem "rubocop", "~> 1.65.1"
-  gem "rubocop-rspec", "~> 2.22.0"
+  gem "rubocop-rspec", "~> 3.0.4"
   gem "webmock", "~> 3.18.1"
 end

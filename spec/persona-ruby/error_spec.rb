@@ -15,11 +15,8 @@ RSpec.describe Persona::Error do
       @response = double
       @env = double
 
-      allow(@response).to receive(:status).and_return(200)
-      allow(@response).to receive(:env).and_return(@env)
-      allow(@response).to receive(:body).and_return({})
-      allow(@env).to receive(:method).and_return("GET")
-      allow(@env).to receive(:url).and_return("https://test.com")
+      allow(@response).to receive_messages(status: 200, env: @env, body: {})
+      allow(@env).to receive_messages(method: "GET", url: "https://test.com")
     end
 
     it "returns no error with status of 200" do
