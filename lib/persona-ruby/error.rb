@@ -4,7 +4,7 @@ module Persona
   class Error < StandardError
     attr_reader :response
 
-    def self.from_response(response)
+    def self.from_response(response) # rubocop:disable Metrics/CyclomaticComplexity, Metrics/MethodLength
       klass =
         case response.status
         when 400 then BadRequest

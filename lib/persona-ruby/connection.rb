@@ -5,7 +5,7 @@ require "faraday"
 module Persona
   class Connection
     def initialize(url, auth_token)
-      @connection = Faraday.new(url: url) do |builder|
+      @connection = Faraday.new(url:) do |builder|
         builder.request :json
         builder.headers[:accept] = "application/json"
         builder.response :json

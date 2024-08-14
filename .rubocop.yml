@@ -4,7 +4,7 @@ require:
 AllCops:
   NewCops: enable
   SuggestExtensions: false
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 3.3.3
 
 Metrics/BlockLength:
   Enabled: true
@@ -19,13 +19,13 @@ Naming/FileName:
 RSpec/ExampleLength:
   Enabled: false
 
-RSpec/FilePath:
-  Enabled: false
-
 RSpec/InstanceVariable:
   Enabled: false
 
 RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/SpecFilePathFormat:
   Enabled: false
 
 RSpec/SubjectStub:
