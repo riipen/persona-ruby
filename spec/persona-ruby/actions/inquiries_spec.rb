@@ -32,9 +32,9 @@ RSpec.describe Persona::Actions::Inquiries do
 
   describe "#inquiry_post" do
     it "issues the correct POST request to create an inquiry" do
-      attributes = {"account-id": "act_123", "inquiry-template-id": "itmpl_123"}
+      attributes = { "account-id": "act_123", "inquiry-template-id": "itmpl_123" }
       stub = stub_request(:post,
-                          "#{@client.url}/inquiries").with(body: { data: {attributes: } })
+                          "#{@client.url}/inquiries").with(body: { data: { attributes: } })
 
       @client.inquiry_create(attributes)
 
@@ -45,9 +45,9 @@ RSpec.describe Persona::Actions::Inquiries do
   describe "#inquiry_update" do
     it "issues the correct PATCH request to update an inquiry" do
       id = "0"
-      attributes = {"name-first": "Yugi", "name-last": "Moto"}
-      stub = stub_request(:patch, 
-                          "#{@client.url}/inquiries/#{id}").with(body: { data: {attributes: }})
+      attributes = { "name-first": "Yugi", "name-last": "Moto" }
+      stub = stub_request(:patch,
+                          "#{@client.url}/inquiries/#{id}").with(body: { data: { attributes: } })
 
       @client.inquiry_update(id, attributes)
 
