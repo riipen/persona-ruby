@@ -15,7 +15,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.3.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/riipen/persona-ruby"
   spec.metadata["changelog_uri"] = "https://github.com/riipen/persona-ruby/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
@@ -29,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "faraday", ">= 2.0.1"
+  spec.add_dependency "faraday", "~> 2.0", ">= 2.0.1"
 
   spec.metadata["rubygems_mfa_required"] = "true"
 end
