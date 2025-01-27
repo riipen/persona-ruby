@@ -30,6 +30,7 @@ Then you can create a Persona API client.
 ```ruby
 client = Persona::Client.new(
     access_token: 'access_token', # Access token from authorization flow
+    timeout: 30, # Optional setting for timeouts of all requests (default 60)
 )
 ```
 
