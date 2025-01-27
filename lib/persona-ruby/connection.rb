@@ -4,12 +4,13 @@ require "faraday"
 
 module Persona
   class Connection
-    def initialize(url, auth_token)
+    def initialize(url, auth_token, options = { timeout: 60 })
       @connection = Faraday.new(url:) do |builder|
         builder.request :json
         builder.headers[:accept] = "application/json"
         builder.response :json
         builder.request :authorization, auth_token, ""
+        builder.options.timeout = options[:timeout]
       end
     end
 
