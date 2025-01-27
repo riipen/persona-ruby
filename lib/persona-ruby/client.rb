@@ -7,13 +7,14 @@ module Persona
 
     BASE_URL = "https://withpersona.com/api/v1"
 
-    def initialize(access_token:)
+    def initialize(access_token:, timeout: 60)
       @access_token = "Bearer #{access_token}"
-      @url = BASE_URL
+      @timeout      = timeout
+      @url          = BASE_URL
     end
 
     def connection
-      Connection.new(@url, @access_token)
+      Connection.new(@url, @access_token, timeout: @timeout)
     end
   end
 end
