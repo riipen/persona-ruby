@@ -3,6 +3,7 @@
 module Persona
   class Client
     include Persona::Actions::Inquiries
+
     attr_reader :url
 
     BASE_URL = "https://withpersona.com/api/v1"
