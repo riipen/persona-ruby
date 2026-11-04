@@ -1,3 +1,6 @@
+## [0.2.4] - 2026-11-03
+- Upgraded Faraday to 2.14.4 and raised its minimum version to 2.14.3 to fix CVE-2026-54297
+
 ## [0.2.3] - 2026-11-03
  - Upgraded json gem to 2.19.9
 

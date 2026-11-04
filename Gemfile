@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "faraday", ">= 2.0.1"
+gem "faraday", ">= 2.14.3"
 
 group :development, :test do
   gem "rake", "~> 13.4.2"
