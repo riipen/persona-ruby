@@ -10,5 +10,5 @@ group :development, :test do
   gem "rspec_junit_formatter", "~> 0.6.0"
   gem "rubocop", "~> 1.92.3"
   gem "rubocop-rspec", "~> 3.10.2"
-  gem "webmock", "~> 3.26.2"
+  gem "webmock", "~> 3.36.0"
 end
