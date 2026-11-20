@@ -1,3 +1,6 @@
+## [0.2.6] - 2026-11-20
+- Upgraded Faraday to 2.15.1 and raised the minimum supported Faraday version to 2.15.1.
+
 ## [0.2.5] - 2026-11-20
 - Updated the development and CI Ruby version to 4.0.10
 - Upgraded Addressable to 2.9.2 to fix CVE-2026-126348, CVE-2026-126349, CVE-2026-126350, CVE-2026-126351, CVE-2026-126352, and CVE-2026-126354
