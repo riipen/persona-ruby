@@ -80,7 +80,7 @@ PLATFORMS
   x86_64-darwin-23
 
 DEPENDENCIES
-  faraday (>= 2.14.3)
+  faraday (~> 2.14.4)
   rake (~> 13.4.2)
   rspec (~> 3.13.2)
   rspec_junit_formatter (~> 0.6.0)
